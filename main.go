@@ -20,6 +20,7 @@ func startJVM(cmd *cmdline.Command){
     //fmt.Printf("classpath: %v\n" ,cmd.Options().Classpath())
     options.InitOptions(cmd.Options())
     cp := classpath.Parse(cmd.Options().Classpath())
+    //fmt.Println(cp.CompositeEntry.String())
     fmt.Printf("classpath:%v class:%v args:%v\n",cmd.Options().Classpath(),cmd.Class(),cmd.Args())
 
     className := strings.Replace(cmd.Class(),".","/",-1)

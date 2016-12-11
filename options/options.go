@@ -20,7 +20,8 @@ func InitOptions(cmdOptions *cmdline.Options){
 }
 
 func initJavaHome(useOsEnv bool){
-    jh := "./jre"
+    //jh := "./jre"
+    jh := "/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre"
     if useOsEnv {
         jh = os.Getenv("JAVA_HOME")
         if jh == "" {
