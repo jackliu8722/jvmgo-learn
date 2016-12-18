@@ -20,13 +20,14 @@ func InitOptions(cmdOptions *cmdline.Options){
 }
 
 func initJavaHome(useOsEnv bool){
-    //jh := "./jre"
-    jh := "/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre"
+    jh := "./jre"
+    //jh := "/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre"
     if useOsEnv {
         jh = os.Getenv("JAVA_HOME")
         if jh == "" {
             panic("$JAVA_HOME not set!")
         }
+        jh += "/jre"
     }
     if absJh, err := filepath.Abs(jh); err == nil {
         AbsJavaHome = absJh

@@ -5,11 +5,11 @@ type ConstantFieldrefInfo struct {
 }
 
 type ConstantMethodrefInfo struct {
-    ConstantMethodrefInfo
+    ConstantMemberrefInfo
 }
 
 type ConstantInterfaceMethodrefInfo struct {
-    ConstantMethodrefInfo
+    ConstantMemberrefInfo
 }
 
 type ConstantMemberrefInfo struct {

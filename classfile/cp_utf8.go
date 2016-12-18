@@ -21,7 +21,7 @@ func (self *ConstantUtf8Info) Str() string {
 
 func decodeMUTF8(bytearr []byte) string {
     utflen := len(bytearr)
-    chararr := make([]byte,utflen)
+    chararr := make([]uint16,utflen)
 
     var c,char2,char3 uint16
 

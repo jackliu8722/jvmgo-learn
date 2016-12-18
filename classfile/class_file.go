@@ -13,6 +13,14 @@ type ClassFile struct {
     AttributeTable
 }
 
+func (self *ClassFile) MajorVersion() uint16 {
+    return self.majorVersion
+}
+
+func (self *ClassFile) MinorVersion() uint16 {
+    return self.minorVersion
+}
+
 func (self *ClassFile) read(reader *ClassReader) {
     self.readAndCheckMagic(reader)
     self.readVersions(reader)

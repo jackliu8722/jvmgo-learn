@@ -51,7 +51,7 @@ type ConstantInfo interface {
          return &ConstantClassInfo{cp:cp}
      case CONSTANT_Fieldref:
          return &ConstantFieldrefInfo{ConstantMemberrefInfo{cp:cp}}
-     case CONSTANT_MethodType:
+     case CONSTANT_Methodref:
          return &ConstantMethodrefInfo{ConstantMemberrefInfo{cp:cp}}
      case CONSTANT_InterfaceMethodref:
          return &ConstantInterfaceMethodrefInfo{ConstantMemberrefInfo{cp:cp}}
